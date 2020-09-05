@@ -47,10 +47,10 @@ Inicio funcion loop
 */
 void loop()
 {
-  float distancia = 0.01723 * readUltrasonicDistance(2, 2);
+  float distancia = 0.01723 * readUltrasonicDistance(2, 2);// se cambia de tipo int a tipo float
   Serial.print("medicion [cm]: ");
   Serial.println(distancia);//para calibrar
-  if((distancia <= 336) && (distancia >= 200)) {
+  if((distancia <= 336) && (distancia >= 200)) // se considera distancia maxima 336 en vez de 333
     digitalWrite(verde,HIGH);
   } 
   else {
